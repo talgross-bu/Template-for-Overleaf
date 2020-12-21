@@ -1,0 +1,17 @@
+\ifx\undefined\bysame
+\newcommand{\bysame}{\leavevmode\hbox to\leftmargin{\hrulefill\,\,}}
+\fi
+\begin{thebibliography}{xx}
+
+\harvarditem[Chetty and Finkelstein]{Chetty and Finkelstein}{2013}{Chetty2013}
+{\bf Chetty, Raj and Amy Finkelstein}, ``Social Insurance: Connecting Theory to
+  Data,'' in Alan~J. Auerbach, Raj Chetty, Martin Feldstein, and Emmanuel Saez,
+  eds., {\it Handbook of Public Economics, Volume 5}, Elsevier, 2013,
+  pp.~111--193.
+
+\harvarditem[Hansen and Imrohoroglu]{Hansen and Imrohoroglu}{1992}{Hansen1992}
+{\bf Hansen, Gary~D. and Ayse Imrohoroglu}, ``The Role of Unemployment
+  Insurance in an Economy with Liquidity Constraints and Moral Hazard,'' {\it
+  Journal of Political Economy}, 1992, {\it 100} (1), 118--142.
+
+\end{thebibliography}
