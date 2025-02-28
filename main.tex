@@ -24,6 +24,18 @@
 \usepackage{setspace}
 \onehalfspacing
 
+% endfloat: tables and figures at the end
+% options: 
+%  noheads -- no section headers 
+%   nolists -- don't create lists
+%   figuresfirst: put figures before tables
+%		preferable so pdf bookmark for "Figures and Tables" points to right page
+%     endfloat quirk - have first figure be position [h] ("here")
+%     also helps gets pdf bookmark right
+%   nomarkers: don't have the "Table [N] about here" in the text
+% by default one float per page
+\usepackage[noheads,nolists,figuresfirst,nomarkers]{endfloat} 
+
 \usepackage{sectsty}
 \sectionfont{\large}
 \subsectionfont{\normalsize}
@@ -178,6 +190,23 @@ Pellentesque porta auctor lectus, non tincidunt nisl accumsan vitae. Class apten
 \bibliography{our-cites.bib}
 \end{singlespace}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\clearpage{}
+\phantomsection  
+\addcontentsline{toc}{section}{Figures and Tables}
+\newgeometry{top=0.75in,bottom=0.75in,left=0.75in,right=0.75in}
+% %%%%%% TABLES AND FIGURES %%%%%%%%
+% by default, endfloat puts all tables and figures at the very end
+% \processdelayedfloats places them here
+\processdelayedfloats
+
+\restoregeometry
+
+% turn off endfloat for appendix
+\makeatletter 
+ \efloat@restorefloats 
+ \makeatother
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
